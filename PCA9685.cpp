@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
 #include "PCA9685.h"
@@ -7,8 +7,15 @@
 PCA9685::PCA9685(const int Addr)
 {
     I2C_FD = wiringPiI2CSetup(Addr);
+    if (I2C_FD == -1)
+    {
+        std::cout << "Device Not Found!";
+        return;
+    }
+
     setup();
     setPWMFreq(1000);
+    delay(100);
 }
 
 // Get Dev Status Indicator
