@@ -4,6 +4,7 @@
 #include <inttypes.h>
 
 // Register Definitions
+#define DEV_ADDR 0x40         // Device Address
 #define MODE1 0x00            // Mode  register  1
 #define MODE2 0x01            // Mode  register  2
 #define SUBADR1 0x02          // I2C-bus subaddress 1
@@ -26,7 +27,7 @@
 class PCA9685
 {
 public:
-    PCA9685(const int Addr = 0x40);
+    PCA9685(const int Addr = DEV_ADDR);
 
     void setPWMFreq(int);
     void setPWM(uint8_t, int, int);
