@@ -5,4 +5,4 @@
 Click [here](http://wiringpi.com/download-and-install/) for the WiringPi Library Installation and Test Guide!
 * Make sure to include ***"-lwiringPi"*** flag in the Compilation Process..
 
-And [here](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf) for the BNO055 Datasheet!
+And [here](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf) for the PCA9685 Datasheet!
